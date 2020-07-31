@@ -1,0 +1,149 @@
+/* Overall Queries */
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* End */
+
+/* Nav Queries */
+@media screen and (max-width: 1000px) {
+  .navigation {
+    display: none;
+  }
+}
+/* End */
+
+/* Header Queries */
+@media screen and (max-width: 600px) {
+  .header .heading {
+    margin: 0 10%;
+  }
+}
+/* End */
+
+/* About Queries */
+@media screen and (max-width: 1000px) {
+  .about .body .text {
+    font-size: 100% !important;
+  }
+  .about .title {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about .body .text {
+    font-size: 120% !important;
+  }
+  .about .body .img {
+    display: none;
+  }
+}
+/* End */
+
+/* Experience Queries */
+@media screen and (max-width: 1000px) {
+  section {
+    padding-left: 0px;
+  }
+  .experience .title {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .experience .body div .box:hover {
+    transform: scale(1);
+  }
+
+  .experience .body {
+    width: 80%;
+  }
+  .experience .body .bigger-box {
+    margin: 5% 0 !important;
+    font-size: 100%;
+  }
+
+  .experience .body .bigger-box .icon-big {
+    font-size: 280%;
+  }
+
+  .experience .body div .box ul {
+    font-size: 85%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .experience .body {
+    width: 100%;
+  }
+  .experience .body .bigger-box {
+    margin: 5% 0 !important;
+    font-size: 110%;
+  }
+
+  .experience .body .bigger-box .icon-big {
+    font-size: 300%;
+  }
+
+  .experience .body div .box ul {
+    font-size: 95%;
+  }
+}
+/* End */
+
+/* Project Queries */
+@media screen and (max-width: 1000px) {
+  .project .title {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sub-body {
+    height: 50%;
+  }
+}
+/* End */
+
+/* Skills */
+@media screen and (max-width: 1000px) {
+  .page-icon {
+    display: none;
+  }
+  .skill .title {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hoverskill:hover {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 279px) {
+  .skill .body .item {
+    margin: 30px auto;
+    padding: 0 10% !important;
+  }
+}
+
+/* End */

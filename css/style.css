@@ -1,481 +1,513 @@
 /* Overall styles */
 
-
 /* main color: #1abc9c 
    lighter-version: #9ff2e1
    darker-version: #094539*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 *:focus {
-    outline: none;
+  outline: none;
 }
 
 .clearfix {
-    zoom: 1;
+  zoom: 1;
 }
 
 .clearfix::after {
-    content: ".";
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden;
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
 }
 
 .clear {
-    clear: both;
+  clear: both;
 }
 
 html {
-    background-color: #fff;
-    font-size: 20px;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
+  background-color: #fff;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
-
 /* End */
-
 
 /* Reusables */
 
 section {
-    padding: 50px 0px;
-    padding-left: 20px;
+  padding: 50px 0px;
+  padding-left: 7%;
 }
 
 .row {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 h1 {
-    font-weight: 300 !important;
-    font-size: 400% !important;
-    margin: 10px auto !important;
+  font-weight: 300 !important;
+  font-size: 350% !important;
+  margin: 10px auto !important;
 }
 
 h2 {
-    font-weight: 100 !important;
-    font-size: 200% !important;
-    margin: 5px 0 !important;
+  font-weight: 100 !important;
+  font-size: 200% !important;
+  margin: 5px 0 !important;
 }
 
 h3 {
-    font-weight: 100 !important;
-    font-size: 120% !important;
+  font-weight: 100 !important;
+  font-size: 120% !important;
+  padding: 0 4%;
 }
 
 h4 {
-    font-weight: 100 !important;
-    font-size: 100% !important;
-    color: #1abc9c;
-    font-style: italic;
+  font-weight: 100 !important;
+  font-size: 100% !important;
+  padding: 0 4%;
+  color: #1abc9c;
+  font-style: italic;
 }
 
-
 /* End */
-
 
 /* Navigation */
 
 .navigation {
-    position: fixed;
-    height: 100vh;
-    width: 8%;
-    padding-left: 0px;
+  position: fixed;
+  height: 100vh;
+  width: 10%;
+  padding-left: 0px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .navigation ul {
-    list-style: none;
+  list-style: none;
+  margin: 0 18%;
 }
 
 .navigation ul li {
-    margin: 30% 20%;
-    font-size: 180%;
+  display: block;
+  height: 20vh;
+  font-size: 180%;
+  transition: transform 0.5s;
+}
+
+.navigation ul li:hover {
+  transform: scale(1.2);
 }
 
 .navigation ul li a:link,
 .navigation ul li a:visited {
-    padding-top: 8%;
-    display: block;
-    border: 1px solid #135346;
-    color: #135346;
-    text-align: center;
-    height: 70px;
-    width: 70px;
-    border-radius: 50px;
-    transition: color 0.5s, border-color, 0.5s, background-color, 0.5s;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  border: 1px solid #135346;
+  color: #135346;
+  text-align: center;
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+  margin: 0 auto !important;
+  transition: color 0.5s, border-color, 0.5s, background-color, 0.5s;
 }
 
 .navigation ul li a:active,
 .navigation ul li a:hover {
-    background-color: #9ff2e1;
-    color: white;
-    border-color: #9ff2e1;
-    transform: scale(1.3);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #9ff2e1;
+  color: white;
+  border-color: #9ff2e1;
 }
 
+.navigation ul li a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /* End */
-
 
 /* Header */
 
 .header {
-    background-image: linear-gradient(#a7ffed88, #a7ffed88), url(img/profile_pic.svg);
-    background-size: cover;
-    height: 100vh;
+  background-image: linear-gradient(#a7ffed88, #a7ffed88),
+    url(img/profile_pic.svg);
+  background-size: cover;
+  height: 100vh;
 }
 
 .header .heading {
-    position: absolute;
-    top: 65%;
-    left: 40%;
-    color: rgb(77, 77, 77);
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: rgb(77, 77, 77);
+  transform: translate(-50%, -50%);
 }
 
 .header .heading p {
-    font-size: 150%;
+  font-size: 150%;
 }
 
 .header .heading p span {
-    color: #1abc9c;
+  color: #1abc9c;
 }
 
-
 /* End */
-
 
 /* About Me */
 
 .about .title {
-    border-left: solid 4px rgb(77, 77, 77);
-    margin-left: 8%;
-    margin-right: 8%;
-    padding: 0 20px;
-    transition: border-left 0.5s;
+  border-left: solid 4px rgb(77, 77, 77);
+  margin-left: 8%;
+  margin-right: 8%;
+  padding: 0 20px;
+  transition: border-left 0.5s;
 }
 
 .about .title:hover {
-    border-left: solid 4px #1abc9c;
+  border-left: solid 4px #1abc9c;
 }
 
 .about .body {
-    height: 100%;
-    margin: 30px auto;
-    height: 300px;
+  margin: 30px auto;
+  height: 100%;
 }
 
 .about .body .img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/profile_pic.jpeg);
-    background-size: cover;
-    height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(img/profile_pic.jpeg);
+  background-size: cover;
 }
 
 .about .body .text {
-    font-weight: 100;
-    height: 100%;
-    line-height: 145%;
-    word-spacing: 2%;
-    font-size: 90%;
-    padding: 0 5%;
+  font-weight: 100;
+  height: 100%;
+  line-height: 145%;
+  word-spacing: 2%;
+  font-size: 90%;
+  padding: 0 5%;
 }
 
 .about .body .text div {
-    padding: 0 5px;
+  padding: 0 5px;
 }
 
 .about .body .text ul li span {
-    color: #1abc9c;
-    font-weight: 100;
+  color: #1abc9c;
+  font-weight: 100;
 }
 
 .about .body .text ul li a:link,
 .about .body .text ul li a:visited {
-    text-decoration: none;
-    color: inherit !important;
-    transition: color 0.5s;
+  text-decoration: none;
+  color: inherit !important;
+  transition: color 0.5s;
 }
 
 .about .body .text ul li a:active,
 .about .body .text ul li a:hover {
-    color: #9ff2e1 !important;
+  color: #9ff2e1 !important;
 }
 
 .about .body .text ul {
-    list-style: none;
+  list-style: none;
 }
 
-
 /* End */
-
 
 /* Experience */
 
 .experience {
-    background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
 
 .experience .title {
-    border-right: solid 4px rgb(77, 77, 77);
-    margin-left: 8%;
-    margin-right: 8%;
-    float: right;
-    padding: 0 20px;
-    transition: border-right 0.5s;
+  border-right: solid 4px rgb(77, 77, 77);
+  margin-left: 8%;
+  margin-right: 8%;
+  float: right;
+  padding: 0 20px;
+  transition: border-right 0.5s;
 }
 
 .experience .title:hover {
-    border-right: solid 4px #1abc9c;
+  border-right: solid 4px #1abc9c;
 }
 
 .experience .body {
-    height: 100%;
-    margin: 30px auto;
-    height: 400px;
+  height: 100%;
+  margin: 30px auto;
 }
 
 .experience .body div .box {
-    background-color: #fff;
-    text-align: center;
-    margin: 10px auto;
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-    transition: color 0.5s, background-color 0.5s, transform 0.5s;
+  background-color: #fff;
+  text-align: center;
+  margin: 10px auto;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  transition: color 0.5s, background-color 0.5s, transform 0.5s;
 }
 
 .experience .body div .box:hover {
-    background-color: #9ff2e1;
-    color: #fff !important;
-    transform: scale(1.2);
-    z-index: 9999;
+  background-color: #1abc9c;
+  color: #fff !important;
+  transform: scale(1.2);
+  z-index: 9999;
 }
 
 .experience .body div .icon-big {
-    font-size: 250%;
+  font-size: 250%;
 }
 
 .experience .body div .box ul {
-    padding: 0 10%;
-    font-size: 75%;
-    font-weight: 100;
-    text-align: left;
-    list-style: none;
+  padding: 0 10%;
+  font-size: 75%;
+  font-weight: 100;
+  text-align: left;
+  list-style: none;
 }
 
 .experience .body div .box ul li {
-    padding: 2% 0;
+  padding: 2% 0;
 }
 
-
 /* End */
-
 
 /* Projects */
 
 .project .title {
-    border-left: solid 4px rgb(77, 77, 77);
-    margin-left: 8%;
-    margin-right: 8%;
-    padding: 0 20px;
-    transition: border-left 0.5s;
+  border-left: solid 4px rgb(77, 77, 77);
+  margin-left: 8%;
+  margin-right: 8%;
+  padding: 0 20px;
+  transition: border-left 0.5s;
 }
 
 .project .title:hover {
-    border-left: solid 4px #1abc9c;
+  border-left: solid 4px #1abc9c;
+}
+
+.project .body .box a:link,
+.project .body .box a:visited {
+  text-decoration: none;
+  color: #135346 !important;
+  transition: color 0.5s;
+}
+
+.project .body .box a:active,
+.project .body .box a:hover {
+  color: #9ff2e1 !important;
 }
 
 .project .body {
-    margin: 0px auto;
-    margin-top: 30px;
+  display: flex;
+  margin: 30px auto;
+  margin-top: 30px;
 }
 
 .project .body .box {
-    margin: 20px 0;
-    padding: 5px 2%;
-    height: 190px;
-    border-radius: 3px;
-    transition: border-color 2s, transform 2s;
-    border: solid 1px #fff;
+  margin: 20px 0;
+  padding: 5px 2%;
+  height: 33% !important;
+  border-radius: 3px;
+  transition: border-color 2s, transform 2s;
+  border: solid 1px #fff;
+}
+
+.project .body .box h3,
+.project .body .box h4 {
+  padding: 0;
 }
 
 .project .body .box:hover {
-    border-color: #1abc9c;
-    transform: translateY(-15px);
+  border-color: #1abc9c;
+  transform: translateY(-15px);
 }
 
 .project .body .box p {
-    font-size: 90%;
-    font-weight: 100;
-    display: block;
+  font-size: 90%;
+  font-weight: 100;
+  display: block;
 }
 
-
 /* End */
-
 
 /* Skills */
 
 .skill {
-    background-color: #f8f8f8;
+  background-color: #f8f8f8;
 }
 
 .skill .title {
-    border-right: solid 4px rgb(77, 77, 77);
-    margin-left: 8%;
-    margin-right: 8%;
-    float: right;
-    padding: 0 20px;
-    transition: border-right 0.5s;
+  border-right: solid 4px rgb(77, 77, 77);
+  margin-left: 8%;
+  margin-right: 8%;
+  float: right;
+  padding: 0 20px;
+  transition: border-right 0.5s;
 }
 
 .skill .title:hover {
-    border-right: solid 4px #1abc9c;
+  border-right: solid 4px #1abc9c;
 }
 
 .skill .body {
-    padding: 40px 0;
-    margin: 0 auto;
+  padding: 40px 0;
+  margin: 0 auto;
 }
 
 .skill .body .item {
-    margin: 30px auto;
+  height: 90%;
+  width: 90%;
+  margin: 30px auto;
 }
 
 .skill .body .item p {
-    color: rgb(77, 77, 77);
-    font-family: "Roboto", sans-serif;
-    font-size: 200%;
-    font-weight: 300;
+  color: rgb(77, 77, 77);
+  font-family: "Roboto", sans-serif;
+  font-size: 200%;
+  font-weight: 300;
 }
 
 .skill .body #skill1 .rs-handle {
-    background-color: #9ff2e1;
-    border: 8px solid transparent;
+  background-color: #9ff2e1;
+  border: 8px solid transparent;
 }
 
 .skill .body #skill2 .rs-handle {
-    background-color: #135346;
-    border: 8px solid transparent;
+  background-color: #135346;
+  border: 8px solid transparent;
 }
 
 .skill .body #skill3 .rs-handle {
-    background-color: #1abc9c;
-    border: 8px solid transparent;
+  background-color: #1abc9c;
+  border: 8px solid transparent;
 }
 
 .skill .body #skill4 .rs-handle {
-    background-color: #9ff2e1;
-    border: 8px solid transparent;
+  background-color: #9ff2e1;
+  border: 8px solid transparent;
 }
 
 .skill .body #skill5 .rs-handle {
-    background-color: #135346;
-    border: 8px solid transparent;
+  background-color: #135346;
+  border: 8px solid transparent;
 }
 
 .skill .body #skill6 .rs-handle {
-    background-color: #1abc9c;
-    border: 8px solid transparent;
+  background-color: #1abc9c;
+  border: 8px solid transparent;
 }
 
-.body .page-icon {
-    padding-top: 7%;
-    padding-bottom: 7%;
-    font-size: 300%;
-    color: rgb(219, 219, 219);
+.body .page-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 300%;
+  color: rgba(219, 219, 219, 0.5);
 }
 
 .hoverskill {
-    transition: transform 0.7s;
+  transition: transform 0.7s;
 }
 
 .hoverskill:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
-
-.skill .title:hover {
-    border-left: solid 4px #1abc9c;
-}
-
 
 /* End */
 
-
 /* Contact */
+.contact {
+  height: 100vh;
+}
 
 .contact .title {
-    border-left: solid 4px rgb(77, 77, 77);
-    margin-left: 8%;
-    margin-right: 8%;
-    padding: 0 20px;
-    transition: border-left 0.5s;
+  border-left: solid 4px rgb(77, 77, 77);
+  margin-left: 8%;
+  margin-right: 8%;
+  padding: 0 20px;
+  transition: border-left 0.5s;
+}
+
+.contact .title:hover {
+  border-left: solid 4px #1abc9c;
 }
 
 .contact .body {
-    margin: 0 auto;
-    padding: 40px 0;
+  height: 70%;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
 .contact .body form {
-    margin: 0 auto;
-    padding: 40px 0;
-    padding-top: 0;
-    width: 80%;
-    transition: color 0.5s, border-color, 0.5s, box-shadow 0.5s;
-    border: 1px solid #fff;
+  margin: 0 auto;
+  padding: 40px 0;
+  padding-top: 0;
+  width: 80%;
+  transition: color 0.5s, border-color, 0.5s, box-shadow 0.5s;
+  border: 1px solid #fff;
 }
 
 .contact .body form input,
 .contact .body form textarea {
-    display: block;
-    width: 100%;
-    margin: 10px auto;
-    border-width: 1px;
-    border-radius: 5px;
+  display: block;
+  width: 100%;
+  margin: 10px auto;
+  border-width: 1px;
+  border-radius: 5px;
 }
 
 .contact .body form .social a:link,
 .contact .body form .social a:visited {
-    display: block;
-    color: inherit;
-    margin: 0 auto;
-    transition: transform 0.5s;
+  display: block;
+  color: inherit;
+  margin: 0 auto;
+  transition: transform 0.5s;
 }
 
 .contact .body form .social a:active,
 .contact .body form .social a:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .contact .body form .social {
-    width: 100%;
-    padding: 10px 0;
-    margin: 0;
-    font-size: 270%;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  font-size: 270%;
 }
 
 .contact .body form:hover {
-    color: #1abc9c;
-    border-color: #1abc9c;
-    box-shadow: 15px 15px;
+  color: #1abc9c;
+  border-color: #1abc9c;
+  box-shadow: 15px 15px;
 }
 
 .contact .submit {
-    background-color: #fff;
-    border-width: 1px;
-    padding: 3px 0;
-    border-radius: 25px;
-    color: rgb(77, 77, 77);
+  display: block;
+  margin: 0 auto;
+  background-color: #fff;
+  border-width: 1px;
+  padding: 3px 0;
+  border-radius: 15px;
+  color: rgb(77, 77, 77);
 }
-
 
 /* End */

@@ -1,5 +1,25 @@
-!(function ($) {
+$(document).ready(function () {
   "use strict";
+
+  $("#about-link").click(function () {
+    $("html, body").animate({ scrollTop: $("#about").offset().top }, 1000);
+  });
+
+  $("#experience-link").click(function () {
+    $("html, body").animate({ scrollTop: $("#experience").offset().top }, 1000);
+  });
+
+  $("#project-link").click(function () {
+    $("html, body").animate({ scrollTop: $("#project").offset().top }, 1000);
+  });
+
+  $("#skill-link").click(function () {
+    $("html, body").animate({ scrollTop: $("#skill").offset().top }, 1000);
+  });
+
+  $("#contact-link").click(function () {
+    $("html, body").animate({ scrollTop: $("#contact").offset().top }, 1000);
+  });
 
   if ($(".typed").length) {
     var typed_strings = $(".typed").data("typed-items");
@@ -31,7 +51,7 @@
 
   var skill_values = {
     width: 25,
-    radius: 130,
+    radius: 120,
     circleShape: "pie",
     handleShape: "round",
     editableTooltip: false,
@@ -127,10 +147,10 @@
       0: {
         items: 1,
       },
-      600: {
+      852: {
         items: 2,
       },
-      1000: {
+      1248: {
         items: 3,
         loop: false,
       },
@@ -153,4 +173,21 @@
   $("#left").click(function () {
     owl.trigger("prev.owl.carousel", [700]);
   });
-})(jQuery);
+
+  $("#submit").click(() => {
+    var email = $("#email").val();
+    var name = $("#name").val();
+    var subject = $("#subject").val();
+    var message = $("#message").val();
+    var body = `Sender Name: ${name} <br> Sender Email: ${email}<br> Message Body: ${message} `;
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "okeisamuel766@gmail.com",
+      Password: "40908B23071281441499A3D5B0EB22D865AB",
+      To: "samuel.o.okei@ttu.edu",
+      From: "okeisamuel766@gmail.com",
+      Subject: subject,
+      Body: body,
+    }).then(() => alert("Sent"));
+  });
+});
